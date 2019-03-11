@@ -7,7 +7,7 @@ package com.mycompany.polimorfismovehiculos;
 
 /**
  *
- * @author Juan Sebastian
+ * @author Juan Sebastian, Edward Ramos
  */
 public class Skateboard extends Vehicle {
 
@@ -29,10 +29,16 @@ public class Skateboard extends Vehicle {
         this.myBoardLength = myBoardLength;
     }
 
+    /**
+     * Metodo de Impresion
+     */
     public void imprimeDesdeInterface() {
         System.out.println("Se imprime el metodo de la interface desde la clase Skateboard.");
     }
 
+     /**
+     * Metodo de Impresion
+     */
     public void imprimrDesdeVehiculo() {
         System.out.println("Se imprime el metodo de la clase Vehicle desde la clase Skateboard.");
     }
