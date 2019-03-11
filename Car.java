@@ -7,7 +7,7 @@ package com.mycompany.PolimorfismoVehiculos;
 
 /**
  *
- * @author Juan Sebastian
+ * @author Juan Sebastian, Edward Ramos
  */
 public class Car extends PoweredVehicle {
 
@@ -28,11 +28,15 @@ public class Car extends PoweredVehicle {
     public void setMyEngineSize(String myEngineSize) {
         this.myEngineSize = myEngineSize;
     }
-
+/**
+*Metodo que imprime Un mensaje
+*/
     public void imprimeDesdeInterface() {
-        System.out.println("Se imprime el metodo de la interface desde la clase Car");
+        System.out.println("Se imprime el metodo de la interface IVehicle desde la clase Car");
     }
-
+/**
+*Metodo que imprime Un mensaje
+*/
     @Override
     public void imprimeDesdePowered() {
         System.out.println("Se imprime PoweredVehicle desde la clase Car.");
