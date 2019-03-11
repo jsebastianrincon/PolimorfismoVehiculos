@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author Juan Sebastian
+ * @author Juan Sebastian, Edward Ramos
  */
 public class Principal {
 
@@ -36,56 +36,73 @@ public class Principal {
         imprimirVehiculos();
     }
 
+
+
     private void crearVehiculos() {
-        Car car1 = new Car("3", "Premium", "Honda   ", "Civic");
-        vehicles.add(car1);
-        Car car2 = new Car("4", "Current", "Mazda   ", "323");
-        vehicles.add(car2);
-        Jet jet1 = new Jet("4", "A.C.P.M", "Avianca", "2005");
+        Car carro1 = new Car("10", "Corriente", "Mazda", "222");
+        vehicles.add(carro1);
+        Car carro2 = new Car("4", "ACPM", "Toyota", "323");
+        vehicles.add(carro2);
+        Car carro3 = new Car("20", "Corriente", "Mazda", "888");
+        vehicles.add(carro3);
+             
+        Bicycle bici1 = new Bicycle("100", "XXX", "1990");
+        vehicles.add(bici1);
+        Bicycle bici2 = new Bicycle("12", "BMW", "2001");
+        vehicles.add(bici2);
+        Bicycle bici3 = new Bicycle("8", "ZT", "2010");
+        vehicles.add(bici3);
+              
+        Skateboard skt1 = new Skateboard("70 CM", "ZZZ", "266");
+        vehicles.add(skt1);
+        Skateboard skt2 = new Skateboard("65 CM", "WXP", "123");
+        vehicles.add(skt2);
+        Skateboard skt2 = new Skateboard("85 CM", "MEL", "987");
+        vehicles.add(skt2);
+        
+        
+        Jet jet1 = new Jet("10", "Gasolina", "Avianca", "2011");
         vehicles.add(jet1);
-        Jet jet2 = new Jet("5", "Gas", "NASA   ", "2018");
+        Jet jet2 = new Jet("5", "Gasolina", "Avianca", "2012");
         vehicles.add(jet2);
-        Skateboard skateboard1 = new Skateboard("60", "SK8   ", "aw123");
-        vehicles.add(skateboard1);
-        Skateboard skateboard2 = new Skateboard("65", "Skate X", "X3500");
-        vehicles.add(skateboard2);
-        Bicycle bicycle1 = new Bicycle("2", "Shimano", "2011");
-        vehicles.add(bicycle1);
-        Bicycle bicycle2 = new Bicycle("3", "Wheels", "WX400");
-        vehicles.add(bicycle2);
+        Jet jet3 = new Jet("5", "ACPM", "OWP", "2016");
+        vehicles.add(jet3);
+       
+       
     }
 
     private void imprimirVehiculos() {
         System.out.println();
         System.out.println("Lista de todos los Vehiculos: ");
+         System.out.println("*************************");
         for (Vehicle vehicle : vehicles) {
             if (vehicle instanceof Car) {
                 System.out.println("Car:");
-                System.out.printf("My Engine Size: " + ((Car) vehicle).getMyEngineSize() + "\tMy Fuel Type: " + ((PoweredVehicle) vehicle).getMyFuelType()
-                        + "\tMy Brand: " + vehicle.getMyBrand() + "\tMy Model: " + vehicle.getMyModel());
+                System.out.printf("Tamaño de la maquina: " + ((Car) vehicle).getMyEngineSize() + "Combustible : " + ((PoweredVehicle) vehicle).getMyFuelType()  + "Marca : " + vehicle.getMyBrand() + "Modelo:  " + vehicle.getMyModel());
                 System.out.println();
+                System.out.println("*************************");
             }
-
+            if (vehicle instanceof Bicycle) {
+                System.out.println("Bicycle:");
+                System.out.printf("Numero de engrnajes: " + ((Bicycle) vehicle).getMyGearCount() + "Marca : " + vehicle.getMyBrand() + "Modelo: " + vehicle.getMyModel());
+                System.out.println();
+                System.out.println("*************************");
+            }
             if (vehicle instanceof Jet) {
                 System.out.println("Jet:");
-                System.out.printf("My Engine Count: " + ((Jet) vehicle).getMyEngineCount() + "\tMy Fuel Type: " + ((Jet) vehicle).getMyFuelType()
-                        + "\tMy Brand: " + vehicle.getMyBrand() + "\tMy Model: " + vehicle.getMyModel());
+                System.out.printf("Numero de Motores: " + ((Jet) vehicle).getMyEngineCount() + "Combustible " + ((Jet) vehicle).getMyFuelType() + "Marca: " + vehicle.getMyBrand() + "Modelo: " + vehicle.getMyModel());
                 System.out.println();
+                System.out.println("*************************");
             }
 
             if (vehicle instanceof Skateboard) {
                 System.out.println("Skateboard:");
-                System.out.printf("My Board Length: " + ((Skateboard) vehicle).getMyBoardLength() + "\tMy Brand: " + vehicle.getMyBrand()
-                        + "\tMy Model: " + vehicle.getMyModel());
+                System.out.printf("Tamaño de la Tabla: " + ((Skateboard) vehicle).getMyBoardLength() + "Marca: " + vehicle.getMyBrand()  + "Modelo: " + vehicle.getMyModel());
                 System.out.println();
+                System.out.println("*************************");
             }
 
-            if (vehicle instanceof Bicycle) {
-                System.out.println("Bicycle:");
-                System.out.printf("My Gear Count: " + ((Bicycle) vehicle).getMyGearCount() + "\tMy Brand: " + vehicle.getMyBrand()
-                        + "\tMy Model: " + vehicle.getMyModel());
-                System.out.println();
-            }
+          
         }
     }
 }
