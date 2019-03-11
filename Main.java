@@ -7,7 +7,7 @@ package com.mycompany.PolimorfismoVehiculos;
 
 /**
  *
- * @author Juan Sebastian
+ * @author Juan Sebastian, Edward Ramos
  */
 public class Main {
 
