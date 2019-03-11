@@ -7,13 +7,14 @@ package com.mycompany.PolimorfismoVehiculos;
 
 /**
  *
- * @author Juan Sebastian
+ * @author Juan Sebastian, Edward Ramos
  */
 public class Bicycle extends Vehicle {
 
     private String myGearCount;
     public Bicycle() {
     }
+    
     public Bicycle(String myGearCount, String myBrand, String myModel) {
         super(myBrand, myModel);
         this.myGearCount = myGearCount;
@@ -25,6 +26,9 @@ public class Bicycle extends Vehicle {
         this.myGearCount = myGearCount;
     }
     //@Override
+    /**
+     * Metodo que Imprime 
+     */
     public void imprimeDesdeInterface() {
         System.out.println("Metodo de la clase Bicycle");
     }
